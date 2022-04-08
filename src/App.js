@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Card from "./Component/card";
+import Nav from "./Component/nav";
+import './App.css'
 function App() {
+  console.log(Nav)
+  let products = [{
+    title:"My most favorite place in the world",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
+  },{
+    title:"My most favorite place in the world",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
+  },{
+    title:"My most favorite place in the world",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
+  },{
+    title:"My most favorite place in the world",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
+  },{
+    title:"My most favorite place in the world",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
+  },{
+    title:"My most favorite place in the world",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
+  },{
+    title:"My most favorite place in the world",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
+  }]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Nav/>
+      <div class='scrollable'>
+{products.map((product, index) => <Card key={index} product = {product} />)}
+            </div>
     </div>
   );
 }
