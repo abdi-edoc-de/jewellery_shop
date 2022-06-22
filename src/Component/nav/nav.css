@@ -1,10 +1,10 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 670px) {
   .main {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 85%;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -13,6 +13,7 @@
 }
 
 .main {
+
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -207,7 +208,7 @@ nav .has-child .name:after {
   content: "";
   width: 10px;
   height: 4px;
-  background-image: url("http://www.elemental-shift.com/remote-assets/down-arrow.svg");
+  /* background-image: url("http://www.elemental-shift.com/remote-assets/down-arrow.svg"); */
   display: block;
   position: absolute;
   bottom: -9px;
@@ -354,7 +355,7 @@ nav input:checked~.has-child .name:after {
 
 .masthead .brand-container {
   padding: 10px;
-  background-color: #393939;
+  background-color: #2f3640;
 }
 
 .masthead .brand-container a {

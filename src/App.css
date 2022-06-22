@@ -20,7 +20,7 @@
 @media only screen and (min-width: 600px) {
   .scrollable {
     margin: 0;
-    margin-top: 20%;
+    margin-top: 0%;
     padding: 0;
     overflow: hidden;
     overflow-y: auto; /* Only vertical scroll appears, only if needed */
@@ -29,6 +29,17 @@
 }
 
 @media only screen and (min-width: 882px) {
+  .scrollable {
+    margin: 0;
+    margin-top: 10%;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: auto; /* Only vertical scroll appears, only if needed */
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   .scrollable {
     margin: 0;
     margin-top: 5%;
