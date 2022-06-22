@@ -46,8 +46,8 @@ export const login = (userName, password) => (dispatch, getState) => {
         onSuccess: loginRequested.type,
         onFailed: requestFailed.type,
         data: {
-            name:"kidus",
-            password : '12345'
+            name:userName,
+            password : password
         },
         method: 'post'
 
