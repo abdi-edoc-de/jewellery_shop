@@ -1,37 +1,19 @@
-import Card from "./Component/card";
-import Nav from "./Component/nav";
+import { BrowserRouter as Router } from "react-router-dom";
+import React, { Component }  from 'react';
+import Drawer from './pages/Drawer'
 import './App.css'
+import LogInu from "./Component/login/loginU"
+import {useSelector} from 'react-redux';
+import {getUser} from './store/user'
 function App() {
-  console.log(Nav)
-  let products = [{
-    title:"My most favorite place in the world",
-    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
-  },{
-    title:"My most favorite place in the world",
-    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
-  },{
-    title:"My most favorite place in the world",
-    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
-  },{
-    title:"My most favorite place in the world",
-    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
-  },{
-    title:"My most favorite place in the world",
-    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
-  },{
-    title:"My most favorite place in the world",
-    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
-  },{
-    title:"My most favorite place in the world",
-    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas doloribus dolorum ratione optio. Tenetur id fugiat totam, ducimus velit? Officia mollitia reiciendis ipsum!"
-  }]
+  let user = useSelector((state)=>getUser(state));
+
   return (
-    <div >
-      <Nav/>
-      <div class='scrollable'>
-{products.map((product, index) => <Card key={index} product = {product} />)}
-            </div>
-    </div>
+
+    <Router>
+      
+      {user.value?<Drawer/>:<LogInu/>}
+    </Router>
   );
 }
 
